@@ -1,0 +1,18 @@
+--- a/src/ap/ieee802_11.c
++++ b/src/ap/ieee802_11.c
+@@ -7666,6 +7666,6 @@ static void hostapd_deauth_sta(struct host
+ 			       const struct ieee80211_mgmt *mgmt)
+ {
+-	wpa_msg(hapd->msg_ctx, MSG_DEBUG,
++	wpa_msg(hapd->msg_ctx, MSG_INFO,
+ 		"deauthentication: STA=" MACSTR " reason_code=%d",
+ 		MAC2STR(mgmt->sa), le_to_host16(mgmt->u.deauth.reason_code));
+ 
+@@ -7690,6 +7690,6 @@ static void hostapd_disassoc_sta(struct h
+ 				 const struct ieee80211_mgmt *mgmt)
+ {
+-	wpa_msg(hapd->msg_ctx, MSG_DEBUG,
++	wpa_msg(hapd->msg_ctx, MSG_INFO,
+ 		"disassocation: STA=" MACSTR " reason_code=%d",
+ 		MAC2STR(mgmt->sa), le_to_host16(mgmt->u.disassoc.reason_code));
+ 
